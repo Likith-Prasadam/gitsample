@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lead Management System</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Lead Management Form</h1>
+
+      <form action="/submit" method="POST">
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Enter Name" required />
+        </div>
+
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Enter Email" required />
+        </div>
+
+        <div class="input-group">
+          <input
+            type="text"
+            name="phone"
+            placeholder="Enter Phone Number"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <input
+            type="text"
+            name="business"
+            placeholder="Business Type"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <textarea name="message" placeholder="Enter Message"></textarea>
+        </div>
+
+        <button type="submit">Submit Lead</button>
+      </form>
+    </div>
+  </body>
+</html>
